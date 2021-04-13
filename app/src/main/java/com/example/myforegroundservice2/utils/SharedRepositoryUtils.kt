@@ -1,7 +1,8 @@
-package com.example.myforegroundservice2
+package com.example.myforegroundservice2.utils
 
+import android.util.Log
 import com.example.myforegroundservice2.repositories.KEY_SAVED_OBJECT
-import com.example.myforegroundservice2.repositories.SharedRepository
+import com.example.myforegroundservice2.useCases.SharedRepository
 
 fun SharedRepository.updateCountAppOpenings(): Int {
     return (get(KEY_SAVED_OBJECT) as? Int ?: 0).also { number ->

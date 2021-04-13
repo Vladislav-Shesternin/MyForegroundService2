@@ -2,7 +2,7 @@ package com.example.myforegroundservice2.useCases
 
 import android.content.Context
 
-interface CreatorNotificationChannelUseCase {
+interface CreatorNotificationChannel {
 
     fun createNotificationChannel(context: Context)
 

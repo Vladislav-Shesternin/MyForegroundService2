@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".CounterForegroundService"/>
+        <service android:name=".foregroundServices.CounterForegroundService"/>
     </application>
 
 </manifest>

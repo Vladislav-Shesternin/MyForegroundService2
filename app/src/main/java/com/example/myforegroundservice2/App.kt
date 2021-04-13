@@ -1,16 +1,9 @@
 package com.example.myforegroundservice2
 
 import android.app.Application
-import com.example.myforegroundservice2.repositories.CreatorNotificationChannel
+import dagger.hilt.android.HiltAndroidApp
 
-class App : Application() {
+@HiltAndroidApp
+class App : Application()
 
-    override fun onCreate() {
-        super.onCreate()
-
-        CreatorNotificationChannel.createNotificationChannel(this)
-
-    }
-
-
-}
+//CreatorNotificationChannel.createNotificationChannel(this)

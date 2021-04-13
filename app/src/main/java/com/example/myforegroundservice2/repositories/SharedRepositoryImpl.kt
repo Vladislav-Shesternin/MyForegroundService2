@@ -1,13 +1,15 @@
 package com.example.myforegroundservice2.repositories
 
 import android.content.Context
-import com.example.myforegroundservice2.useCases.SharedRepositoryUseCase
+import com.example.myforegroundservice2.useCases.SharedRepository
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 
 const val KEY_SAVED_OBJECT = "app_saved_object"
 
-class SharedRepository(
-    private val context: Context
-) : SharedRepositoryUseCase {
+class SharedRepositoryImpl @Inject constructor(
+    @ApplicationContext val context: Context
+) : SharedRepository {
 
     companion object {
         private const val NAME_SHARED_REPOSITORY = "app_shared_repository"

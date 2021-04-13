@@ -5,11 +5,12 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import com.example.myforegroundservice2.R
-import com.example.myforegroundservice2.useCases.CreatorNotificationChannelUseCase
+import com.example.myforegroundservice2.useCases.CreatorNotificationChannel
+import javax.inject.Inject
 
 const val CHANNEL_ID = "channel_id"
 
-object CreatorNotificationChannel : CreatorNotificationChannelUseCase {
+class CreatorNotificationChannelImpl @Inject constructor() : CreatorNotificationChannel {
 
     override fun createNotificationChannel(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

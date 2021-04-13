@@ -1,6 +1,6 @@
 package com.example.myforegroundservice2.useCases
 
-interface SharedRepositoryUseCase {
+interface SharedRepository {
 
     fun set(any: Any, key: String)
     fun get(key: String): Any?

@@ -3,9 +3,10 @@ package com.example.myforegroundservice2.repositories
 import android.content.Context
 import androidx.core.app.NotificationCompat
 import com.example.myforegroundservice2.R
-import com.example.myforegroundservice2.useCases.NotificationBuilderUseCase
+import com.example.myforegroundservice2.useCases.NotificationBuilder
+import javax.inject.Inject
 
-object NotificationBuilder : NotificationBuilderUseCase {
+class NotificationBuilderImpl @Inject constructor() : NotificationBuilder {
 
     override fun buildNotification(
         context: Context,
